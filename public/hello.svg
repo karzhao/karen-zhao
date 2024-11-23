@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="100">
+  <!-- Define the font and animations -->
+  <style>
+    @keyframes typing {
+      0% {
+        clip-path: inset(0 100% 0 0); /* Initially, text is clipped (hidden) */
+      }
+      100% {
+        clip-path: inset(0 0 0 0); /* Fully revealed text */
+      }
+    }
+
+    @keyframes deleting {
+      0% {
+        clip-path: inset(0 0 0 0); /* Text fully revealed */
+      }
+      100% {
+        clip-path: inset(0 100% 0 0); /* Text hidden (deleted) */
+      }
+    }
+
+    text {
+      font-family: 'DM Serif Text', serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 40px;
+      fill: #999999;
+      white-space: nowrap;
+      overflow: hidden;
+      clip-path: inset(0 100% 0 0); /* Start with the text hidden */
+      animation: typing 4s steps(16) 0s forwards, deleting 2s steps(16) 4s forwards, reset 0s 6s forwards repeatCount="indefinite"; /* Loop the animation */
+    }
+  </style>
+
+  <!-- The text that will be typed and deleted -->
+  <text x="10" y="40">Hello, I'm Karen!</text>
+</svg>
