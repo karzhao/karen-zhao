@@ -19,7 +19,9 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="flex justify-center mt-4">
-                    <h3 className=" mt-5 text-xl font-bold font-sans-serif text-center text-amber-500">SBU '27 B.S. in Computer Science, B.S. in Applied Mathematics</h3>
+                    <h3 className=" mt-5 text-xl font-bold font-sans-serif text-center text-amber-500">
+                        SBU 2027 — B.S. in Computer Science, B.S. in Applied Mathematics
+                    </h3>
                 </div>
             </div>
 
