@@ -21,10 +21,10 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="flex flex-col items-center justify-center mt-4 self-center">
-                    <h3 className="mt-5 text-xl font-bold font-sans-serif text-center text-sky-200">
-                        SBU 2027 — B.S. in Computer Science, B.S. in Applied Mathematics
+                    <h3 className="mt-5 text-lg font-bold font-sans-serif text-center text-gray-300">
+                        SBU &#39;27 — B.S. in Computer Science, B.S. in Applied Mathematics
                     </h3>
-                    <div className="mt-10 min-w-max flex gap-4">
+                    <div className="mt-10 min-w-max flex gap-4 items-start">
                         <ViewGitHubButton />
                         <ViewLinkedInButton />
                     </div>
