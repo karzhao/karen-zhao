@@ -21,6 +21,14 @@ export const PROJECTS = [
         repo: "https://github.com/karenz710/karen-zhao",
     },
     {
+        thumbnail: "/thumbnails/recipe-website.png",
+        title: "Recipe Website",
+        date: "November 2024",
+        description:
+            "My first website using JavaScript, HTML to share recipes",
+        repo: "https://github.com/karenz710/recipe-website",
+    },
+    {
         thumbnail: "/thumbnails/playlist-app.jpg",
         title: "Android Playlist App",
         date: "November 2024",
@@ -52,7 +60,7 @@ const ProjectEntries = ({
         <div className="flex justify-center mb-2 mx-auto">
             <div className="flex justify-center w-full lg:max-w-4xl mb-2 border-2 rounded-lg ">
                 <div className="card md:card-side flex">
-                    <figure className="flex-shrink-0 w-80 h-100 overflow-hidden">
+                    <figure className="flex-shrink-0 w-100 h-100 overflow-hidden">
                         <Image src={thumbnail!} width="320" height="320" className="p-4"
                             alt="Thumbnail" />
                     </figure>
