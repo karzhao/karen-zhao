@@ -9,9 +9,9 @@ interface NavItem {
 
 const NavigationBar: React.FC = () => {
   const navItems: NavItem[] = [
-    { title: 'Home', url: '#Hero' },
+    { title: 'Home', url: '#main' },
     { title: 'About', url: '#about' },
-    { title: 'Projects', url: '#Projects' },
+    { title: 'Projects', url: '#projects' },
   ];
 
   return (

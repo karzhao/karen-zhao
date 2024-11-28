@@ -13,7 +13,6 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        // Set default font for body and text
         sans: ["Proxima Nova"], 
       },
     },

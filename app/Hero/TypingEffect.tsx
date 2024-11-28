@@ -9,9 +9,9 @@ interface TypingEffectProps {
 
 const TypingEffect: React.FC<TypingEffectProps> = ({
   words,
-  typingSpeed = 35,
-  deletingSpeed = 5,
-  delaySpeed = 700,
+  typingSpeed = 30,
+  deletingSpeed = 3,
+  delaySpeed = 400,
 }) => {
   const [text, setText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
