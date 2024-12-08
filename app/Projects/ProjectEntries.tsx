@@ -29,7 +29,7 @@ export const PROJECTS = [
         repo: "https://github.com/karenz710/recipe-website",
     },
     {
-        thumbnail: "/thumbnails/playlist-app.jpg",
+        thumbnail: "/thumbnails/playlist-app.png",
         title: "Android Playlist App",
         date: "November 2024",
         description:
