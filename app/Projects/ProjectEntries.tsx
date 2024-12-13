@@ -68,8 +68,8 @@ const ProjectEntries = ({
         <div className="flex justify-center mb-2 mx-auto">
             <div className="flex justify-center w-full lg:max-w-4xl mb-2 border-2 rounded-lg ">
                 <div className="card md:card-side flex">
-                    <figure className="flex-shrink-0 w-100 h-50 overflow-hidden">
-                        <Image src={thumbnail!} width="500" height="100" className="p-2"
+                    <figure className="flex-shrink-0 w-full max-w-md overflow-hidden">
+                        <Image src={thumbnail!} width="1500" height="100" className="p-2"
                             alt="Thumbnail" />
                     </figure>
                     <div className="text-gray-300 card-body w-full">
