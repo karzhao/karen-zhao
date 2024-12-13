@@ -13,11 +13,19 @@ export interface ProjectElement {
 
 export const PROJECTS = [
     {
+        thumbnail: "/thumbnails/book-visualization.png",
+        title: "Book Visualization",
+        date: "December 2024",
+        description:
+            "A way to view and compare books based on location published and date published.",
+        repo: "https://github.com/karenz710/book-visualization",
+    },
+    {
         thumbnail: "/thumbnails/portfolio.png",
         title: "Portfolio Website",
         date: "November 2024",
         description:
-            "This very website using TypeScript and React!",
+            "This very website using TypeScript and React",
         repo: "https://github.com/karenz710/karen-zhao",
     },
     {
