@@ -27,8 +27,8 @@ const Education = () => {
             <button
               className={`px-4 py-2 rounded transition-colors duration-200
                 ${activeSemester === semester.name 
-                  ? 'bg-gray-200 text-gray-800' 
-                  : 'bg-transparent text-gray-400 hover:text-gray-600'
+                  ? 'bg-sky-600 text-sky-50' 
+                  : 'bg-transparent text-sky-500 hover:text-sky-600'
                 }`}
               onClick={() => setActiveSemester(semester.name)}
               type="button"
@@ -58,7 +58,7 @@ const Education = () => {
   );
 };
 const colorMap: Record<string, string> = {
-  CSE: "text-lime-600",
-  AMS: "text-cyan-600",
+  CSE: "text-lime-400",
+  AMS: "text-blue-400",
 };
 export default Education;
