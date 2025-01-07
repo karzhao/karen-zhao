@@ -48,8 +48,8 @@ const Education = () => {
             >
               {classItem.courseCode}
             </h6>
-            <h6 className="inline text-gray-300 mr-4">{classItem.courseName}</h6>
-            <h6 className="inline text-gray-300 ">{classItem.instructor}</h6>
+            <h6 className="inline text-gray-400 mr-4">{classItem.courseName}</h6>
+            <h6 className="inline text-gray-400 ">{classItem.instructor}</h6>
             <br className="clear-both" />
           </div>
         ))}
@@ -58,7 +58,7 @@ const Education = () => {
   );
 };
 const colorMap: Record<string, string> = {
-  CSE: "text-lime-400",
+  CSE: "text-indigo-400",
   AMS: "text-blue-400",
 };
 export default Education;

@@ -20,15 +20,6 @@ body {
   font-family: sans-serif;
 }
 
-/* Custom Styles */
-.datecard {
-  background-color: #ece2e2;
-  padding: 8px;
-  margin-bottom: 8px;
-  float: left;
-  border-radius: 16px;
-}
-
 .grade {
   width: 36px;
   padding-left: 4px;

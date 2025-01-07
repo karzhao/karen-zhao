@@ -20,7 +20,7 @@ const NavigationBar: React.FC = () => {
         <a
           key={item.url}
           href={item.url}
-          className="rounded-lg px-3 py-2 text-slate-50 font-medium hover:bg-slate-100 hover:text-slate-900 opacity-100"
+          className="rounded-lg px-3 py-2 text-slate-50 font-medium hover:text-slate-400 opacity-100"
         >
           {item.title}
         </a>
