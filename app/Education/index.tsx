@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { semesters } from "./SemesterData";
+import { DiVim } from "react-icons/di";
 
 const Education = () => {
   const [activeSemester, setActiveSemester] = useState(semesters[0].name);
@@ -10,17 +11,25 @@ const Education = () => {
   )?.classes;
 
   return (
-    <div className="container mx-auto p-4 flex flex-col items-center mx-auto w-fit">
-      <h2 className="font-bold text-gray-300 text-4xl flex justify-center my-10">Education</h2>
-      <span className="text-start font-bold text-sm text-gray-300">2023 - 2027</span>
-      <h5 className="text-start text-gray-300">B.S. in Computer Science, B.S. in Applied Mathematics — STONY BROOK UNIVERSITY</h5>
+    <div>
+      <h1 className="font-bold text-gray-300 text-4xl flex justify-center my-10">
+        Education
+      </h1>
+      <div className=" flex-col items-center text-center justify-center mb-5">
+        <p className="font-bold text-gray-300 text-lg">Stony Brook University</p>
+        <p className="font-bold text-gray-300 text-lg">B.S. in Computer Science, B.S. in Applied Mathematics</p>
+        <p className="text-gray-300 text-sm">Expected 2027</p>
+      </div>
+
       <ul className="flex mb-3" role="tablist">
         {semesters.map((semester) => (
-          <li className="datecard mr-2" key={semester.name} role="presentation">
+          <li key={semester.name} role="presentation">
             <button
-              className={`nav-link ${
-                activeSemester === semester.name ? "active" : ""
-              }`}
+              className={`px-4 py-2 rounded transition-colors duration-200
+                ${activeSemester === semester.name 
+                  ? 'bg-gray-200 text-gray-800' 
+                  : 'bg-transparent text-gray-400 hover:text-gray-600'
+                }`}
               onClick={() => setActiveSemester(semester.name)}
               type="button"
             >
@@ -33,6 +42,12 @@ const Education = () => {
         {activeSemesterClasses?.map((classItem) => (
           <div key={classItem.courseCode} className="mb-2">
             <span className="grade inline-block w-10 px-1 mx-2 rounded bg-gray-800">{classItem.grade}</span>
+            <h6
+              className={`inline mr-4 ${colorMap[classItem.courseCode.slice(0, 3)] || "text-gray-200"
+                }`}
+            >
+              {classItem.courseCode}
+            </h6>
             <h6 className="inline text-gray-300 mr-4">{classItem.courseName}</h6>
             <h6 className="inline text-gray-300 ">{classItem.instructor}</h6>
             <br className="clear-both" />
@@ -42,5 +57,8 @@ const Education = () => {
     </div>
   );
 };
-
+const colorMap: Record<string, string> = {
+  CSE: "text-lime-600",
+  AMS: "text-cyan-600",
+};
 export default Education;
