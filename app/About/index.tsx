@@ -15,7 +15,7 @@ const About = () => {
                         <li>Expected Graduation Date: May 2027</li>
                         <li>In my free time I like to:</li>
                         <ul className="leading-snug ml-20">
-                            <li>Go on runs and hikes ⛅⛰️🌲🌼  </li>
+                            <li>Go on runs ⛅⛰️🌲🌼  </li>
                             <li>Read 📖 </li>
                             <li>Program 💻 </li>
                         </ul>
