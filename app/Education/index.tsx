@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { semesters } from "./SemesterData";
+import Image from "next/image";
 
 const Education = () => {
   const [activeSemester, setActiveSemester] = useState(semesters[0].name);
@@ -15,9 +16,11 @@ const Education = () => {
         Education
       </h1>
       <div className=" flex-col items-center text-center justify-center mb-5">
-        <p className="font-bold text-gray-300 text-lg">Stony Brook University</p>
-        <p className="font-bold text-gray-300 text-lg">B.S. in Computer Science, B.S. in Applied Mathematics</p>
-        <p className="text-gray-300 text-base">Expected 2027</p>
+        <p className="font-bold text-gray-300 text-base">Stony Brook University</p>
+        <p className="font-bold text-gray-300 text-base">B.S. in Computer Science</p>
+        <p className="font-bold text-gray-300 text-base">B.S. in Applied Mathematics and Statistics</p>
+        <p className="text-gray-300 text-sm">GPA: 3.85</p>
+        <p className="text-gray-300 text-sm">Expected Graduation: May 2027</p>
       </div>
 
       <ul className="flex justify-center mb-3" role="tablist">
