@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import { semesters } from "./SemesterData";
-import Image from "next/image";
 
 const Education = () => {
   const [activeSemester, setActiveSemester] = useState(semesters[0].name);
