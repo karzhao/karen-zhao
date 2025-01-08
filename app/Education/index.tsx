@@ -20,13 +20,13 @@ const Education = () => {
         <p className="text-gray-300 text-sm">Expected 2027</p>
       </div>
 
-      <ul className="flex mb-3" role="tablist">
+      <ul className="flex justify-center mb-3" role="tablist">
         {semesters.map((semester) => (
           <li key={semester.name} role="presentation">
             <button
               className={`px-4 py-2 rounded transition-colors duration-200
-                ${activeSemester === semester.name 
-                  ? 'bg-sky-600 text-sky-50' 
+                ${activeSemester === semester.name
+                  ? 'bg-sky-600 text-sky-50'
                   : 'bg-transparent text-sky-500 hover:text-sky-600'
                 }`}
               onClick={() => setActiveSemester(semester.name)}
@@ -37,21 +37,35 @@ const Education = () => {
           </li>
         ))}
       </ul>
-      <div className="tab-content text-start">
-        {activeSemesterClasses?.map((classItem) => (
-          <div key={classItem.courseCode} className="mb-2">
-            <span className="grade inline-block w-10 px-1 mx-2 rounded bg-gray-800">{classItem.grade}</span>
-            <h6
-              className={`inline mr-4 ${colorMap[classItem.courseCode.slice(0, 3)] || "text-gray-200"
-                }`}
-            >
-              {classItem.courseCode}
-            </h6>
-            <h6 className="inline text-gray-400 mr-4">{classItem.courseName}</h6>
-            <h6 className="inline text-gray-400 ">{classItem.instructor}</h6>
-            <br className="clear-both" />
-          </div>
-        ))}
+      <div className="flex justify-center">
+        <table className="w-fit table-auto">
+          <thead>
+            <tr>
+              <th className="text-gray-300 text-left px-4 ">Grade</th>
+              <th className="text-gray-300 text-left px-4">Course Code</th>
+              <th className="text-gray-300 text-left px-4">Course Name</th>
+              <th className="text-gray-300 text-left px-4">Instructor</th>
+            </tr>
+          </thead>
+          <tbody>
+            {activeSemesterClasses?.map((classItem) => (
+              <tr key={classItem.courseCode} className="border-b-2 border-emerald-800">
+              <td className="px-4">
+                <span className="inline-block w-10 px-1 rounded bg-slate-200 text-grey-800 text-center">
+                  {classItem.grade}
+                </span>
+              </td>
+              <td className="py-2 px-4">
+                <span className={`${colorMap[classItem.courseCode.slice(0, 3)] || "text-gray-200"}`}>
+                  {classItem.courseCode}
+                </span>
+              </td>
+              <td className="py-2 px-4 text-gray-400">{classItem.courseName}</td>
+              <td className="py-2 px-4 text-gray-400">{classItem.instructor}</td>
+            </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

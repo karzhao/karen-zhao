@@ -27,7 +27,7 @@ export interface ClassElement {
         classes: [
             {
                 courseCode: "CSE 114",
-                courseName: "Intro to Object-Oriented Prog",
+                courseName: "Intro to Object-Oriented Programming",
                 instructor: "Paul Fodor",
                 grade: "A"
             },
