@@ -19,7 +19,7 @@ const Education = () => {
         <p className="font-bold text-gray-300 text-base">B.S. in Computer Science</p>
         <p className="font-bold text-gray-300 text-base">B.S. in Applied Mathematics and Statistics</p>
         <p className="text-gray-300 text-sm">GPA: 3.85</p>
-        <p className="text-gray-300 text-sm">Expected Graduation: May 2027</p>
+        <p className="text-gray-300 text-sm">2023-Present</p>
       </div>
 
       <ul className="flex justify-center mb-3" role="tablist">
