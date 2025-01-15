@@ -41,7 +41,7 @@ export const PROJECTS = [
         title: "Android Playlist App",
         date: "November 2024",
         description:
-            "An android app to manage a playlist using a doubly-linked list and cursor to navigate songs.",
+            "An android app to manage a playlist including functions to play, pause, shuffle using a doubly-linked list and cursor to navigate songs.",
         repo: "https://github.com/karenz710/playlist",
     },
     {
@@ -49,7 +49,7 @@ export const PROJECTS = [
         title: "Robotic Drawing Elephant",
         date: "December 2023",
         description:
-            "An autonomous interactive elephant with Arduino that draws using a 5-bar-linkage system based on colors sensed and flaps its ears afterwards.",
+            "In a team of 4, developed an autonomous interactive toy elephant using Arduino and sensors. Coded an inverse-kinematic algorithm to control a 5-bar-linkage mechanism to draw based on colors sensed. The elephant toy flaps its ears afterwards using gears and servo motors. Designed custom parts (gears, arms) in CAD.",
 
         repo: "#",
     },
