@@ -12,14 +12,7 @@ export interface ProjectElement {
 }
 
 export const PROJECTS = [
-    {
-        thumbnail: "/thumbnails/book-visualization.png",
-        title: "Book Visualization",
-        date: "December 2024",
-        description:
-            "A way to view and compare books based on location published and date published.",
-        repo: "https://github.com/karenz710/book-visualization",
-    },
+    
     {
         thumbnail: "/thumbnails/portfolio.png",
         title: "Portfolio Website",
@@ -41,7 +34,7 @@ export const PROJECTS = [
         title: "Android Playlist App",
         date: "November 2024",
         description:
-            "An android app to manage a playlist including functions to play, pause, shuffle using a doubly-linked list and cursor to navigate songs.",
+            "An android app to manage a playlist including functions to play, pause, shuffle. A doubly linked list ADT is implemented to represent the playlist, with a cursor for navigating through songs.",
         repo: "https://github.com/karenz710/playlist",
     },
     {
@@ -49,7 +42,7 @@ export const PROJECTS = [
         title: "Robotic Drawing Elephant",
         date: "December 2023",
         description:
-            "In a team of 4, developed an autonomous interactive toy elephant using Arduino and sensors. Coded an inverse-kinematic algorithm to control a 5-bar-linkage mechanism to draw based on colors sensed. The elephant toy flaps its ears afterwards using gears and servo motors. Designed custom parts (gears, arms) in CAD.",
+            "In a team of 4, developed an interactive autonomous toy elephant using Arduino, sensors, and servo motors. Implemented an inverse-kinematics algorithm to control a 5-bar linkage for drawing based on sensed colors. The toy flaps its ears after drawing.",
 
         repo: "#",
     },
