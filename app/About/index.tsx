@@ -8,7 +8,7 @@ const About = () => {
                     About
                 </h1>
                 <div className="flex flex-col items-center mx-auto w-fit">
-                    <div className="flex flex-row items-center gap-10">
+                    <div className="flex flex-row items-center gap-10 overflow-x-auto">
                         <Image src={"/my-face.png"} className="w-[500px] border-[3px]" width="700" height="800" alt="picture of me"/>
                         <ul className="text-lg leading-loose tracking-wider text-left list-inside text-gray-300">
                             <li><strong>Name:</strong> Karen Zhao</li>
