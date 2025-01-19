@@ -53,7 +53,7 @@ const Education = () => {
             {activeSemesterClasses?.map((classItem) => (
               <tr key={classItem.courseCode} className="border-b-2 border-emerald-800">
               <td className="px-4 py-3">
-                <span className="text-lg inline-block w-10 px-1 rounded bg-slate-200 text-grey-800 text-center">
+                <span className="text-lg inline-block w-10 px-1 rounded bg-stone-300 text-gray-800 text-center">
                   {classItem.grade}
                 </span>
               </td>

@@ -72,7 +72,7 @@ const ProjectEntries = ({
                         <p className="text-center">{date}</p>
                         <p className="text-gray-300">{description}</p>
                         <Link href={repo}>
-                            <button className="btn bg-transparent rounded-full p-3 border-1 hover:bg-gray-200 disabled:hidden" disabled={repo === "#"}>
+                            <button className="btn bg-transparent rounded-full p-3 border-1 hover:opacity-75 hover:bg-gray-200 disabled:hidden" disabled={repo === "#"}>
                                 <IoLogoGithub size={24}/>
                             </button>
                         </Link>
