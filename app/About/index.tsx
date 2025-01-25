@@ -14,7 +14,6 @@ const About = () => {
                             <li><strong>Name:</strong> Karen Zhao</li>
                             <li><strong>Location:</strong> Queens, NY</li>
                             <li><strong>College:</strong> Stony Brook University, NY</li>
-                            <li><strong>Expected Graduation Date:</strong> May 2027</li>
                             <li>In my free time I like to:</li>
                             <ul className="leading-snug ml-20">
                                 <li>Go on runs ⛅⛰️🌲🌼  </li>
