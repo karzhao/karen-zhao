@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { semesters } from "./SemesterData";
 
 const Education = () => {
-  const [activeSemester, setActiveSemester] = useState(semesters[0].name);
+  const [activeSemester, setActiveSemester] = useState(semesters[semesters.length - 1].name);
 
   const activeSemesterClasses = semesters.find(
     (semester) => semester.name === activeSemester

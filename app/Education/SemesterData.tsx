@@ -90,6 +90,12 @@ export interface ClassElement {
                 grade: " "
             },
             {
+                courseCode: "CSE 303",
+                courseName: "Theory of Computation",
+                instructor: "Omkant Pandey",
+                grade: " "
+            },
+            {
                 courseCode: "CSE 385",
                 courseName: "Analysis of Algorithms: Honors",
                 instructor: "Michael Bender",
