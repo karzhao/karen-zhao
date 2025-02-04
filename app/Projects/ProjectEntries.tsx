@@ -12,7 +12,7 @@ export interface ProjectElement {
 }
 
 export const PROJECTS = [
-    
+
     {
         thumbnail: "/thumbnails/portfolio.png",
         title: "Portfolio Website",
@@ -34,7 +34,7 @@ export const PROJECTS = [
         title: "Android Playlist App",
         date: "November 2024",
         description:
-            "An android app to manage a playlist including functions to play, pause, shuffle. A doubly linked list ADT is implemented to represent the playlist, with a cursor for navigating through songs.",
+            "An android app to manage a playlist including features to add, remove, play, shuffle, clear and navigate songs with a cursor-based system.",
         repo: "https://github.com/karenz710/playlist",
     },
     {
@@ -42,7 +42,7 @@ export const PROJECTS = [
         title: "Robotic Drawing Elephant",
         date: "December 2023",
         description:
-            "In a team of 4, developed an interactive autonomous toy elephant using Arduino, sensors, and servo motors. Implemented an inverse-kinematics algorithm to control a 5-bar linkage for drawing based on sensed colors. The toy flaps its ears after drawing.",
+            "In a team of 4, designed and developed an interactive, autonomous toy elephant as a creative companion for children using Arduino, sensors, and servo motors. Implemented an inverse kinematics algorithm to control a 5-bar linkage system, enabling the toy to draw different drawings based on detected colors. The toy flaps its ears after drawing.",
 
         repo: "#",
     },
@@ -73,7 +73,7 @@ const ProjectEntries = ({
                         <p className="text-gray-300">{description}</p>
                         <Link href={repo}>
                             <button className="btn bg-transparent rounded-full p-3 border-1 hover:opacity-75 hover:bg-gray-200 disabled:hidden" disabled={repo === "#"}>
-                                <IoLogoGithub size={24}/>
+                                <IoLogoGithub size={24} />
                             </button>
                         </Link>
                     </div>
