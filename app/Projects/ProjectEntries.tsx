@@ -34,8 +34,7 @@ export const PROJECTS = [
         title: "Robotic Drawing Elephant",
         date: "December 2023",
         description:
-            "In a team of 4, designed and developed an interactive, autonomous toy elephant as a creative companion for children using Arduino, sensors, and servo motors. Implemented an inverse kinematics algorithm to control a 5-bar linkage system, enabling the toy to draw different drawings based on detected colors. The toy flaps its ears after drawing.",
-
+            "In a team of 4, designed and developed an interactive, autonomous toy elephant as a creative companion for children. The toy draws different drawings based on detected colors and flaps its ears after drawing. Implemented an inverse kinematics algorithm to control the 5-bar linkage system.",
         repo: "#",
     },
 
@@ -50,7 +49,7 @@ const ProjectEntries = ({
     repo,
 }: ProjectElement) => {
     return (
-        <div className="w-full max-w-4xl h-96 mb-8 bg-emerald-700/30 rounded-lg border border-grey-600">
+        <div className="w-full max-w-4xl h-96 mb-8 bg-emerald-700/30 rounded-lg border border-gray-300">
             <div className="grid grid-cols-2 h-full">
             {/* Left Side: IMAGE */}
                 <div className="relative w-full h-full">
@@ -62,11 +61,25 @@ const ProjectEntries = ({
                 </div>
 
             {/*Right Side: CONTENT */}
-                <div className="p-6 flex flex-col">
+                <div className="p-3 flex flex-col mr-5">
                     {/* Title*/}{/* Date and Git*/}
-                    <div className="flex items-center justify-between mb-4">
-                        <h2 className="text-xl font-bold text-gray-200">{title}</h2>
+                    <div className="flex flex-col items-center justify-center mb-4">
+                        <h2 className="text-xl font-bold text-gray-300 mb-1">{title}</h2>
+                        <div className="flex items-center gap-3">
+                            <span className="text-gray-300 text-sm">{date}</span>
+                            {repo !== "#" && (
+                            <Link href={repo}>
+                            <button className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gray-300/90 font-medium text-emerald-900 hover:bg-gray-400">
+                                <IoLogoGithub size={24}/>
+                            </button>
+                            </Link>
+                            )}
+                        </div>
+                        <div>
+                            <p className="mt-2 text-gray-300 text-center leading-relaxed">{description}</p>
+                        </div>
                     </div>
+                    
                     
                     {/* Tech stack*/}
                 </div>
