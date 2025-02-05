@@ -1,5 +1,5 @@
 'use client'
-import ProjectEntries, { ProjectElement, PROJECTS } from "./ProjectEntries";
+import ProjectEntries, { PROJECTS } from "./ProjectEntries";
 const Projects = () => {
     return (
         <div id="projects">

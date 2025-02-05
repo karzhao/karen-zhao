@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { IoLogoGithub } from "react-icons/io";
 
 export interface ProjectElement {
@@ -8,7 +7,6 @@ export interface ProjectElement {
     date: string;
     description: string;
     repo: string;
-
 }
 
 export const PROJECTS = [
@@ -51,16 +49,16 @@ const ProjectEntries = ({
     return (
         <div className="w-full max-w-4xl h-96 mb-8 bg-emerald-700/30 rounded-lg border border-gray-300">
             <div className="grid grid-cols-2 h-full">
-            {/* Left Side: IMAGE */}
+                {/* Left Side: IMAGE */}
                 <div className="relative w-full h-full">
                     <img
-                    src={thumbnail}
-                    alt={title}
-                    className="absolute inset-0 w-full h-full object-contain p-4"
+                        src={thumbnail}
+                        alt={title}
+                        className="absolute inset-0 w-full h-full object-contain p-4"
                     />
                 </div>
 
-            {/*Right Side: CONTENT */}
+                {/*Right Side: CONTENT */}
                 <div className="p-3 flex flex-col mr-5">
                     {/* Title*/}{/* Date and Git*/}
                     <div className="flex flex-col items-center justify-center mb-4">
@@ -68,49 +66,24 @@ const ProjectEntries = ({
                         <div className="flex items-center gap-3">
                             <span className="text-gray-300 text-sm">{date}</span>
                             {repo !== "#" && (
-                            <Link href={repo}>
-                            <button className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gray-300/90 font-medium text-emerald-900 hover:bg-gray-400">
-                                <IoLogoGithub size={24}/>
-                            </button>
-                            </Link>
+                                <Link href={repo}>
+                                    <button className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gray-300/90 font-medium text-emerald-900 hover:bg-gray-400">
+                                        <IoLogoGithub size={24} />
+                                    </button>
+                                </Link>
                             )}
                         </div>
                         <div>
                             <p className="mt-2 text-gray-300 text-center leading-relaxed">{description}</p>
                         </div>
                     </div>
-                    
-                    
+
+
                     {/* Tech stack*/}
                 </div>
             </div>
         </div>
-        
     );
 };
 
 export default ProjectEntries;
-{/* 
-        <div className="flex justify-center mb-2 mx-auto">
-            <div className="flex justify-center w-full lg:max-w-4xl mb-2 border-2 rounded-lg ">
-                <div className="card md:card-side flex">
-                    <figure className="flex-shrink-0 w-full max-w-md overflow-hidden">
-                        <Image src={thumbnail!} width="1500" height="100" className="p-2"
-                            alt="Thumbnail" />
-                    </figure>
-                    <div className="text-gray-300 card-body w-full">
-                        <h2 className="card-title text-center">
-                            <p>{title}</p>
-                        </h2>
-                        <p className="text-center">{date}</p>
-                        <p className="text-gray-300">{description}</p>
-                        <Link href={repo}>
-                            <button className="btn bg-transparent rounded-full p-3 border-1 hover:opacity-75 hover:bg-gray-200 disabled:hidden" disabled={repo === "#"}>
-                                <IoLogoGithub size={24} />
-                            </button>
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        </div>
-        */}
