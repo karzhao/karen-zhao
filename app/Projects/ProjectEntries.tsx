@@ -74,12 +74,10 @@ const ProjectEntries = ({
                             )}
                         </div>
                         <hr className="border-b-[1.5px] border-teal-900 my-1 w-full" />
-                        <div>
+                        <div className="overflow-auto">
                             <p className="mt-2 text-gray-300 text-center leading-relaxed">{description}</p>
                         </div>
                     </div>
-
-
                     {/* Tech stack*/}
                 </div>
             </div>
