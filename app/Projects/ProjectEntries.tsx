@@ -67,12 +67,13 @@ const ProjectEntries = ({
                             <span className="text-gray-300 text-sm">{date}</span>
                             {repo !== "#" && (
                                 <Link href={repo}>
-                                    <button className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gray-300/90 font-medium text-emerald-900 hover:bg-gray-400">
+                                    <button className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white font-medium text-emerald-900 hover:bg-gray-400">
                                         <IoLogoGithub size={24} />
                                     </button>
                                 </Link>
                             )}
                         </div>
+                        <hr className="border-b-[1.5px] border-teal-900 my-1 w-full" />
                         <div>
                             <p className="mt-2 text-gray-300 text-center leading-relaxed">{description}</p>
                         </div>
