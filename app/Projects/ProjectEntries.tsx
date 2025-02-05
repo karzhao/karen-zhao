@@ -21,16 +21,8 @@ export const PROJECTS = [
             "This very website using TypeScript and React",
         repo: "https://github.com/karenz710/karen-zhao",
     },
-    /*{
-        thumbnail: "/thumbnails/recipe-website.png",
-        title: "Recipe Website",
-        date: "November 2024",
-        description:
-            "My first website using JavaScript, HTML to share recipes",
-        repo: "https://github.com/karenz710/recipe-website",
-    },*/
     {
-        thumbnail: "/thumbnails/playlist-app.png",
+        thumbnail: "/thumbnails/playlist-app.jpg",
         title: "Android Playlist App",
         date: "November 2024",
         description:
@@ -58,6 +50,34 @@ const ProjectEntries = ({
     repo,
 }: ProjectElement) => {
     return (
+        <div className="w-full max-w-4xl h-96 mb-8 bg-emerald-700/30 rounded-lg border border-grey-600">
+            <div className="grid grid-cols-2 h-full">
+            {/* Left Side: IMAGE */}
+                <div className="relative w-full h-full">
+                    <img
+                    src={thumbnail}
+                    alt={title}
+                    className="absolute inset-0 w-full h-full object-contain p-4"
+                    />
+                </div>
+
+            {/*Right Side: CONTENT */}
+                <div className="p-6 flex flex-col">
+                    {/* Title*/}{/* Date and Git*/}
+                    <div className="flex items-center justify-between mb-4">
+                        <h2 className="text-xl font-bold text-gray-200">{title}</h2>
+                    </div>
+                    
+                    {/* Tech stack*/}
+                </div>
+            </div>
+        </div>
+        
+    );
+};
+
+export default ProjectEntries;
+{/* 
         <div className="flex justify-center mb-2 mx-auto">
             <div className="flex justify-center w-full lg:max-w-4xl mb-2 border-2 rounded-lg ">
                 <div className="card md:card-side flex">
@@ -80,8 +100,4 @@ const ProjectEntries = ({
                 </div>
             </div>
         </div>
-
-    );
-};
-
-export default ProjectEntries;
+        */}
