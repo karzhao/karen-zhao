@@ -1,5 +1,6 @@
 import React from "react";
 import Link from 'next/link';
+import Image from "next/image";
 import { IoLogoGithub } from "react-icons/io";
 import { GoLinkExternal } from "react-icons/go"; 
 
@@ -15,6 +16,7 @@ export interface ProjectElement {
 
 export const PROJECTS = [
     {
+        thumbnail: "",
         title: "Hack 'N Snacks",
         date: "February 2025",
         description: 
@@ -63,16 +65,17 @@ const ProjectEntries = ({
     description,
     repo,
     link,
-    tools,
 }: ProjectElement) => {
     return (
         <div className="w-full max-w-4xl h-96 mb-8 bg-emerald-700/30 rounded-lg border border-gray-300">
             <div className="grid grid-cols-2 h-full">
                 {/* Left Side: IMAGE */}
                 <div className="relative w-full h-full">
-                    <img
-                        src={thumbnail}
+                    <Image
+                        src={thumbnail || "/thumbnails/default-thumbnail.png"}
                         alt={title}
+                        layout="fill"
+                        objectFit="contain"
                         className="absolute inset-0 w-full h-full object-contain p-4"
                     />
                 </div>
