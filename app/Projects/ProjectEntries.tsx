@@ -1,6 +1,7 @@
 import React from "react";
 import Link from 'next/link';
 import { IoLogoGithub } from "react-icons/io";
+import { GoLinkExternal } from "react-icons/go"; 
 
 export interface ProjectElement {
     thumbnail?: string;
@@ -8,6 +9,7 @@ export interface ProjectElement {
     date: string;
     description: string;
     repo: string;
+    link: string;
     tools?: string;
 }
 
@@ -16,8 +18,9 @@ export const PROJECTS = [
         title: "Hack 'N Snacks",
         date: "February 2025",
         description: 
-            "2nd in Best Beginner Hacks at HopperHacks.\nHack 'N Snacks is a 2D platformer that teaches players about nutrition through exploring levels and encountering variety of foods, learning about their calories and nutrients as they go. At the end, they receive a nutrition summary based on what they ate.",
-        repo: "https://github.com/karenz710/HackAndSnacks"
+            "2nd in Best Beginner Hacks at HopperHacks\nHack 'N Snacks is a 2D platformer that teaches players about nutrition through exploring levels and encountering variety of foods, learning about their calories and nutrients as they go. At the end, they receive a nutrition summary based on what they ate.",
+        repo: "https://github.com/karenz710/HackAndSnacks",
+        link: "https://devpost.com/software/hack-n-snack",
     },
     {
         thumbnail: "/thumbnails/portfolio.png",
@@ -26,6 +29,7 @@ export const PROJECTS = [
         description:
             "This very website using TypeScript and React",
         repo: "https://github.com/karenz710/karen-zhao",
+        link: "#",
         tools: "React, TypeScript",
     },
     {
@@ -35,6 +39,7 @@ export const PROJECTS = [
         description:
             "An android app to manage a playlist including features to add, remove, play, shuffle, clear and navigate songs with a cursor-based system.",
         repo: "https://github.com/karenz710/playlist",
+        link: "#",
         tools: "Java, Android SDK"
     },
     {
@@ -42,8 +47,9 @@ export const PROJECTS = [
         title: "Robotic Drawing Elephant",
         date: "December 2023",
         description:
-            "In a team of 4, designed and developed an interactive, autonomous toy elephant as a creative companion for children. The toy draws different drawings based on detected colors and flaps its ears after drawing. Implemented an inverse kinematics algorithm to control the 5-bar linkage system.",
+            "2nd Best Toy Robot\nIn a team of 4, designed and developed an interactive, autonomous toy elephant as a creative companion for children. The toy draws different drawings based on detected colors and flaps its ears after drawing. Implemented an inverse kinematics algorithm to control the 5-bar linkage system.",
         repo: "#",
+        link: "#",
         tools: "Arduino,",
     },
 
@@ -56,6 +62,7 @@ const ProjectEntries = ({
     date,
     description,
     repo,
+    link,
     tools,
 }: ProjectElement) => {
     return (
@@ -81,6 +88,13 @@ const ProjectEntries = ({
                                 <Link href={repo}>
                                     <button className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white font-medium text-emerald-900 hover:bg-gray-400">
                                         <IoLogoGithub size={24} />
+                                    </button>
+                                </Link>
+                            )}
+                            {link !== "#" && (
+                                <Link href={link}>
+                                    <button className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white font-medium text-emerald-900 hover:bg-gray-400">
+                                        <GoLinkExternal size={20}/>
                                     </button>
                                 </Link>
                             )}
