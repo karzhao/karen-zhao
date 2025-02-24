@@ -1,16 +1,24 @@
+import React from "react";
 import Link from 'next/link';
 import { IoLogoGithub } from "react-icons/io";
 
 export interface ProjectElement {
-    thumbnail?: string
+    thumbnail?: string;
     title: string;
     date: string;
     description: string;
     repo: string;
+    tools?: string;
 }
 
 export const PROJECTS = [
-
+    {
+        title: "Hack 'N Snacks",
+        date: "February 2025",
+        description: 
+            "2nd in Best Beginner Hacks at HopperHacks.\nHack 'N Snacks is a 2D platformer that teaches players about nutrition through exploring levels and encountering variety of foods, learning about their calories and nutrients as they go. At the end, they receive a nutrition summary based on what they ate.",
+        repo: "https://github.com/karenz710/HackAndSnacks"
+    },
     {
         thumbnail: "/thumbnails/portfolio.png",
         title: "Portfolio Website",
@@ -18,6 +26,7 @@ export const PROJECTS = [
         description:
             "This very website using TypeScript and React",
         repo: "https://github.com/karenz710/karen-zhao",
+        tools: "React, TypeScript",
     },
     {
         thumbnail: "/thumbnails/playlist-app.jpg",
@@ -26,6 +35,7 @@ export const PROJECTS = [
         description:
             "An android app to manage a playlist including features to add, remove, play, shuffle, clear and navigate songs with a cursor-based system.",
         repo: "https://github.com/karenz710/playlist",
+        tools: "Java, Android SDK"
     },
     {
         thumbnail: "/thumbnails/elephant.jpg",
@@ -34,6 +44,7 @@ export const PROJECTS = [
         description:
             "In a team of 4, designed and developed an interactive, autonomous toy elephant as a creative companion for children. The toy draws different drawings based on detected colors and flaps its ears after drawing. Implemented an inverse kinematics algorithm to control the 5-bar linkage system.",
         repo: "#",
+        tools: "Arduino,",
     },
 
 ];
@@ -45,6 +56,7 @@ const ProjectEntries = ({
     date,
     description,
     repo,
+    tools,
 }: ProjectElement) => {
     return (
         <div className="w-full max-w-4xl h-96 mb-8 bg-emerald-700/30 rounded-lg border border-gray-300">
@@ -75,10 +87,18 @@ const ProjectEntries = ({
                         </div>
                         <hr className="border-b-[1.5px] border-teal-900 my-1 w-full" />
                         <div className="overflow-auto">
-                            <p className="mt-2 text-gray-300 text-center leading-relaxed">{description}</p>
+                            <p className="mt-2 text-gray-300 text-center leading-relaxed">
+                                {description.split("\n").map((line, index) => (
+                                    <React.Fragment key={index}>
+                                        {line}
+                                        <br />
+                                    </React.Fragment>
+                                ))}</p>
                         </div>
                     </div>
                     {/* Tech stack*/}
+                    <div> 
+                    </div>
                 </div>
             </div>
         </div>
