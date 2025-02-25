@@ -2,10 +2,17 @@ import React from "react";
 import Link from 'next/link';
 import Image from "next/image";
 import { IoLogoGithub } from "react-icons/io";
-import { GoLinkExternal } from "react-icons/go"; 
+import { FaLink } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css"; // swiper styles :D
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination } from "swiper/modules";
 
 export interface ProjectElement {
-    thumbnail?: string;
+    thumbnail?: string[];
+    imgWidth?: number; 
+    imgHeight?: number;
     title: string;
     date: string;
     description: string;
@@ -16,16 +23,24 @@ export interface ProjectElement {
 
 export const PROJECTS = [
     {
-        thumbnail: "",
+        thumbnail: ["/thumbnails/Hack-n-Snacks-1.png", 
+            "/thumbnails/Hack-n-Snacks-2.png", 
+            "/thumbnails/Hack-n-Snacks-3.png", 
+            "/thumbnails/Hack-n-Snacks-4.png", 
+            "/thumbnails/Hack-n-Snacks-5.png"],
+        imgWidth: 1916,
+        imgHeight: 1196,
         title: "Hack 'N Snacks",
         date: "February 2025",
         description: 
-            "2nd in Best Beginner Hacks at HopperHacks\nHack 'N Snacks is a 2D platformer that teaches players about nutrition through exploring levels and encountering variety of foods, learning about their calories and nutrients as they go. At the end, they receive a nutrition summary based on what they ate.",
+            "2nd in Best Beginner Hacks at HopperHacks\na 2D platformer that teaches players about nutrition through exploring levels and encountering variety of foods, learning about their calories and nutrients as they go. At the end, they receive a nutrition summary based on what they ate.",
         repo: "https://github.com/karenz710/HackAndSnacks",
         link: "https://devpost.com/software/hack-n-snack",
     },
     {
-        thumbnail: "/thumbnails/portfolio.png",
+        thumbnail: ["/thumbnails/portfolio.png"],
+        imgWidth: 3000,
+        imgHeight: 1938,
         title: "Portfolio Website",
         date: "November 2024",
         description:
@@ -35,7 +50,7 @@ export const PROJECTS = [
         tools: "React, TypeScript",
     },
     {
-        thumbnail: "/thumbnails/playlist-app.jpg",
+        thumbnail: ["/thumbnails/playlist-app.jpg"],
         title: "Android Playlist App",
         date: "November 2024",
         description:
@@ -45,7 +60,7 @@ export const PROJECTS = [
         tools: "Java, Android SDK"
     },
     {
-        thumbnail: "/thumbnails/elephant.jpg",
+        thumbnail: ["/thumbnails/elephant.jpg"],
         title: "Robotic Drawing Elephant",
         date: "December 2023",
         description:
@@ -60,6 +75,8 @@ export const PROJECTS = [
 
 const ProjectEntries = ({
     thumbnail,
+    imgWidth,
+    imgHeight,
     title,
     date,
     description,
@@ -69,15 +86,29 @@ const ProjectEntries = ({
     return (
         <div className="w-full max-w-4xl h-96 mb-8 bg-emerald-700/30 rounded-lg border border-gray-300">
             <div className="grid grid-cols-2 h-full">
-                {/* Left Side: IMAGE */}
+                {/* Left Side: IMAGE carousel :)*/}
                 <div className="relative w-full h-full">
-                    <Image
-                        src={thumbnail || "/thumbnails/default-thumbnail.png"}
-                        alt={title}
-                        layout="fill"
-                        objectFit="contain"
-                        className="absolute inset-0 w-full h-full object-contain p-4"
-                    />
+                    <Swiper
+                        modules={[Navigation, Pagination]}
+                        navigation // enables arrows
+                        pagination={{ clickable: true }} // dots
+                        loop // circular array !
+                        grabCursor // swiping
+                        className="h-full"    
+                    >
+                        {thumbnail?.map((imgSrc, index) => (
+                            <SwiperSlide key={index}>
+                                <Image
+                                    src={imgSrc || "/thumbnails/default-thumbnail.png"}
+                                    alt={title}
+                                    width={imgWidth || 600}
+                                    height={imgHeight || 400}
+                                    objectFit="contain"
+                                    className="absolute inset-0 w-full h-full object-contain p-4"
+                                />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
 
                 {/*Right Side: CONTENT */}
@@ -89,15 +120,15 @@ const ProjectEntries = ({
                             <span className="text-gray-300 text-sm">{date}</span>
                             {repo !== "#" && (
                                 <Link href={repo}>
-                                    <button className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white font-medium text-emerald-900 hover:bg-gray-400">
+                                    <button className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white font-medium text-emerald-900 hover:bg-gray-300">
                                         <IoLogoGithub size={24} />
                                     </button>
                                 </Link>
                             )}
                             {link !== "#" && (
                                 <Link href={link}>
-                                    <button className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white font-medium text-emerald-900 hover:bg-gray-400">
-                                        <GoLinkExternal size={20}/>
+                                    <button className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white font-medium text-emerald-900 hover:bg-gray-300">
+                                        <FaLink size={18}/>
                                     </button>
                                 </Link>
                             )}
