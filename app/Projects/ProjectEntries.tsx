@@ -33,7 +33,7 @@ export const PROJECTS = [
         title: "Hack 'N Snacks",
         date: "February 2025",
         description: 
-            "2nd in Best Beginner Hacks at HopperHacks\na 2D platformer that teaches players about nutrition through exploring levels and encountering variety of foods, learning about their calories and nutrients as they go. At the end, they receive a nutrition summary based on what they ate.",
+            "2nd in Best Beginner Hacks at HopperHacks\nA 2D platformer that teaches players about nutrition through exploring levels and encountering variety of foods, learning about their calories and nutrients as they go. At the end, they receive a nutrition summary based on what they ate.",
         repo: "https://github.com/karenz710/HackAndSnacks",
         link: "https://devpost.com/software/hack-n-snack",
     },
@@ -64,12 +64,11 @@ export const PROJECTS = [
         title: "Robotic Drawing Elephant",
         date: "December 2023",
         description:
-            "2nd Best Toy Robot\nIn a team of 4, designed and developed an interactive, autonomous toy elephant as a creative companion for children. The toy draws different drawings based on detected colors and flaps its ears after drawing. Implemented an inverse kinematics algorithm to control the 5-bar linkage system.",
+            "2nd Best Toy Robot - team of 4\nAn autonomous toy elephant as a creative companion for children. The toy draws different drawings (based on detected colors) using a 5-bar-linkage mechanism controlled by an inverse kinematics algorithm. Activates ear-flapping mechanism after completing a drawing.",
         repo: "#",
         link: "#",
         tools: "Arduino,",
     },
-
 ];
 
 
