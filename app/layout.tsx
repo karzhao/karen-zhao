@@ -14,7 +14,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Karen Zhao",
+  title: "Karen Zhao Website Portfolio",
   description: "Karen Zhao is a Sophomore in CS at Stony Brook University",
 };
 
