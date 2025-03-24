@@ -3,6 +3,7 @@ import About from './About';
 import Projects from './Projects'
 import Footer from './Footer';
 import Education from './Education';
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Education />
       <Projects />
       <Footer />
+      <Analytics />
     </main>
   );
 }
