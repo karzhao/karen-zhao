@@ -24,6 +24,22 @@ const About = () => {
                         </ul>
                     </div>
                 </div>
+                <div className="flex w-full max-w-screen-xl mx-auto my-5">
+                    <Image
+                        src="/fall-running.jpg"
+                        alt="picture of me"
+                        width={1076}
+                        height={1434}
+                        className="h-[400px] w-auto object-contain"
+                    />
+                    <Image
+                        src="/karen-cruise.jpeg"
+                        alt="picture of me"
+                        width={1600}
+                        height={1200}
+                        className="h-[400px] w-auto object-contain"
+                    />
+                </div>
             </div>
 
         </div>
