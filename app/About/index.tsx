@@ -26,19 +26,33 @@ const About = () => {
                 </div>
                 <div className="flex w-full max-w-screen-xl mx-auto my-5">
                     <Image
-                        src="/fall-running.jpg"
-                        alt="picture of me"
+                        src="/karen-running-fall.jpg"
+                        alt="picture of me running in the fall"
                         width={1076}
                         height={1434}
                         className="h-[400px] w-auto object-contain"
                     />
                     <Image
                         src="/karen-cruise.jpeg"
-                        alt="picture of me"
+                        alt="picture of me on a cruise"
                         width={1600}
                         height={1200}
                         className="h-[400px] w-auto object-contain"
                     />
+                    <Image
+                        src="/karen-restaurant.jpg"
+                        alt="picture of me at a restaurant"
+                        width={695}
+                        height={1183}
+                        className="h-[400px] w-auto object-contain"
+                        />
+                    <Image
+                        src="/karen-running-.5.jpg"
+                        alt="picture of me in CA running"
+                        width={3024}
+                        height={4032}
+                        className="h-[400px] w-auto object-contain"
+                        />
                 </div>
             </div>
 

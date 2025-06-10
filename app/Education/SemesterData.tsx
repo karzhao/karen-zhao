@@ -87,12 +87,41 @@ export interface ClassElement {
                 courseCode: "CSE 220",
                 courseName: "Systems Fundamentals I",
                 instructor: "Daniel Benz",
-                grade: " "
+                grade: "A"
             },
             {
                 courseCode: "CSE 303",
                 courseName: "Theory of Computation",
                 instructor: "Omkant Pandey",
+                grade: "A"
+            },
+            {
+                courseCode: "CSE 385",
+                courseName: "Analysis of Algorithms: Honors",
+                instructor: "Michael Bender",
+                grade: " "
+            },
+        ],
+    },
+    {
+        name: "Fall 2025",
+        classes: [
+            {
+                courseCode: "CSE 316",
+                courseName: "Software Development",
+                instructor: "Richard McKenna",
+                grade: " "
+            },
+            {
+                courseCode: "CSE 320",
+                courseName: "Systems Fundamentals II",
+                instructor: "Eugene Stark",
+                grade: " "
+            },
+            {
+                courseCode: "CSE 310",
+                courseName: "Computer Networks",
+                instructor: "Aruna Balasubramanian",
                 grade: " "
             },
             {
