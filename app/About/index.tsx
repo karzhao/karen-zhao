@@ -56,7 +56,7 @@ export default function About() {
                 {/* top half – four photos */}
                 <div
                     /* one row on desktop, wraps into 2×2 below md */
-                    className="grid grid-cols-4 md:grid-cols-4 sm:grid-cols-2 gap-px h-full gap-0"
+                    className="grid grid-cols-4 md:grid-cols-4 sm:grid-cols-2 h-full gap-0"
                 >
                     {pictures_of_me.map(({ src, alt, width, height }) => (
                         <Image
@@ -66,7 +66,7 @@ export default function About() {
                         width={width}
                         height={height}
                         sizes="25vw" /* each image takes 25% of the width */
-                        className="object-cover"
+                        className="w-full h-full object-cover gap-0"
                         />
                     ))}
                 </div>
