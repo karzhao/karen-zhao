@@ -1,64 +1,89 @@
 'use client'
 import Image from 'next/image';
-const About = () => {
+
+export default function About() {
+    /* image data */
+    const pictures_of_me = [
+       { src: "/karen-running-fall.jpg", width: 1076, height: 1434, alt: "picture of me running in the fall" },
+       { src: "/karen-cruise.jpeg", width: 1600, height: 1200, alt: "picture of me on a cruise" },
+         { src: "/karen-restaurant.jpg", width: 695, height: 1183, alt: "picture of me at a restaurant" },
+         { src: "/karen-running-.5.jpg", width: 3024, height: 4032, alt: "picture of me in CA running" },   
+    ];
+    const school = { src: "/stony-brook-university.jpg", width: 1600, height: 1066, alt: "Stony Brook University" };
+    
     return (
-        <div id="about" style={{ scrollMarginTop: '70px' }}>
-            <div>
-                <h1 className="font-bold text-gray-300 text-4xl flex justify-center my-10">
+        /* 200vh wrapper = 100vh pinned + 100vh scroll up half (me) half (school) block */
+        <section
+            id="about"
+            className="relative min-h-[200vh] scroll-mt-15"
+            >
+
+                {/* 1. pinned bio section: 100vh */}
+            <div className="sticky top-0 z-10 h-screen flex flex-col items-center
+                   justify-center bg-teal-900 space-y-10">
+                 <h1 className="font-bold text-gray-300 text-4xl flex justify-center">
                     About
                 </h1>
-                <div className="flex flex-col items-center mx-auto w-fit">
-                    <div className="flex flex-row items-center gap-10 overflow-x-auto">
-                        <Image src={"/my-face.png"} className="w-[500px] border-[3px]" width="700" height="800" alt="picture of me"/>
-                        <ul className="text-lg leading-loose tracking-wider text-left list-inside text-gray-300">
-                            <li><strong>Name:</strong> Karen Zhao</li>
-                            <li><strong>Location:</strong> Queens, NY</li>
-                            <li><strong>College:</strong> Stony Brook University, NY</li>
-                            <li><strong>Expected Graduation Date:</strong> May 2027</li>
-                            <li>In my free time I like to:</li>
-                            <ul className="leading-snug ml-20">
-                                <li>Go on runs ⛅⛰️🌲🌼  </li>
-                                <li>Read 📖 </li>
-                                <li>Program 💻 </li>
-                            </ul>
-                        </ul>
-                    </div>
-                </div>
-                <div className="flex w-full max-w-screen-xl mx-auto my-5">
+                <div className="flex flex-col md:flex-row items-center gap-10 max-w-6xl px-6">
                     <Image
-                        src="/karen-running-fall.jpg"
-                        alt="picture of me running in the fall"
-                        width={1076}
-                        height={1434}
-                        className="h-[400px] w-auto object-contain"
-                    />
-                    <Image
-                        src="/karen-cruise.jpeg"
-                        alt="picture of me on a cruise"
-                        width={1600}
-                        height={1200}
-                        className="h-[400px] w-auto object-contain"
-                    />
-                    <Image
-                        src="/karen-restaurant.jpg"
-                        alt="picture of me at a restaurant"
-                        width={695}
-                        height={1183}
-                        className="h-[400px] w-auto object-contain"
-                        />
-                    <Image
-                        src="/karen-running-.5.jpg"
-                        alt="picture of me in CA running"
-                        width={3024}
-                        height={4032}
-                        className="h-[400px] w-auto object-contain"
-                        />
+                        src="/my-face.png"
+                        width={500}
+                        height={500}
+                        priority
+                        alt="picture of me"
+                        className="border-4 rounded-md w-[55vw] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg"
+                />
+
+                <ul className="text-gray-300 [font-size:clamp(1rem,2.2vw,1.6rem)] leading-relaxed">
+                    <li><strong>Name:</strong> Karen Zhao</li>
+                    <li><strong>Location:</strong> Queens, NY</li>
+                    <li><strong>College:</strong> Stony Brook University</li>
+                    <li><strong>Expected Graduation:</strong> May 2027</li>
+                    <li className="mt-4">In my free time I like to:</li>
+                    <ul className="ml-6 list-disc">
+                        <li>Go on runs ⛅⛰️🌲🌼</li>
+                        <li>Read 📖</li>
+                        <li>Program 💻</li>
+                    </ul>
+                </ul>
                 </div>
             </div>
 
-        </div>
+                {/* 2. scroll up screen 100vh */}
+
+            <div className="relative z-20 h-screen w-full grid grid-rows-2 bg-teal-900">
+
+                {/* top half – four photos */}
+                <div
+                    /* one row on desktop, wraps into 2×2 below md */
+                    className="grid grid-cols-4 md:grid-cols-4 sm:grid-cols-2 gap-px h-full"
+                >
+                    {pictures_of_me.map(({ src, alt, width, height }) => (
+                        <Image
+                        key={src}
+                        src={src}
+                        alt={alt}
+                        width={width}
+                        height={height}
+                        sizes="25vw" /* each image takes 25% of the width */
+                        className="object-cover"
+                        />
+                    ))}
+                </div>
+
+                {/* bottom half school */}
+                <div className="relative h-full">
+                <Image
+                    src={school.src}
+                    alt={school.alt}
+                    fill
+                    /* “fill” lets Next/Image stretch to the div; object-cover keeps aspect */
+                    sizes="100vw"
+                    className="object-cover"
+                />
+                </div>
+            </div>
+        </section>
 
     )
 }
-
-export default About;

@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
   return (
-    <main className="overflow-hidden bg-teal-900 ">
+    <main className="bg-teal-900 ">
       <Hero />
       <About />
       <Education />

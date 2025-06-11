@@ -81,7 +81,7 @@ export interface ClassElement {
                 courseCode: "CSE 216",
                 courseName: "Programming Abstractions",
                 instructor: "Ritwik Banerjee",
-                grade: " "
+                grade: "B+"
             },
             {
                 courseCode: "CSE 220",
@@ -99,7 +99,7 @@ export interface ClassElement {
                 courseCode: "CSE 385",
                 courseName: "Analysis of Algorithms: Honors",
                 instructor: "Michael Bender",
-                grade: " "
+                grade: "A-"
             },
         ],
     },
