@@ -19,7 +19,7 @@ export default function About() {
             >
 
                 {/* 1. pinned bio section: 100vh */}
-            <div className="sticky top-0 z-10 h-screen flex flex-col items-center
+            <div className="sticky top-0 z-0 h-screen flex flex-col items-center
                    justify-center bg-teal-900 space-y-10">
                  <h1 className="font-bold text-gray-300 text-4xl flex justify-center">
                     About
@@ -51,12 +51,12 @@ export default function About() {
 
                 {/* 2. scroll up screen 100vh */}
 
-            <div className="relative z-20 h-screen w-full grid grid-rows-2 bg-teal-900">
+            <div className="relative z-0 h-screen w-full grid grid-rows-2 bg-teal-900">
 
                 {/* top half – four photos */}
                 <div
                     /* one row on desktop, wraps into 2×2 below md */
-                    className="grid grid-cols-4 md:grid-cols-4 sm:grid-cols-2 gap-px h-full"
+                    className="grid grid-cols-4 md:grid-cols-4 sm:grid-cols-2 gap-px h-full gap-0"
                 >
                     {pictures_of_me.map(({ src, alt, width, height }) => (
                         <Image
