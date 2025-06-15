@@ -5,7 +5,7 @@ export default function About() {
     /* image data */
     const pictures_of_me = [
        { src: "/karen-running-fall.jpg", width: 1076, height: 1434, alt: "picture of me running in the fall" },
-       { src: "/karen-cruise.jpeg", width: 1600, height: 1200, alt: "picture of me on a cruise" },
+       { src: "/karen.jpeg", width: 914, height: 1200, alt: "picture of me on a cruise" },
          { src: "/karen-restaurant.jpg", width: 695, height: 1183, alt: "picture of me at a restaurant" },
          { src: "/karen-running-.5.jpg", width: 3024, height: 4032, alt: "picture of me in CA running" },   
     ];
@@ -66,7 +66,7 @@ export default function About() {
                         width={width}
                         height={height}
                         sizes="25vw" /* each image takes 25% of the width */
-                        className="w-full h-full object-cover gap-0"
+                        className=" object-cover"
                         />
                     ))}
                 </div>
