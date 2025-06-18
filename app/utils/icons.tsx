@@ -1,6 +1,5 @@
 import React from "react";
 import { Icon } from "@iconify-icon/react"
-import Image from "next/image";
 
 const size = 32;
 
