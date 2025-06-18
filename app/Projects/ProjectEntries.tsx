@@ -9,9 +9,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 
+import { getIconElement } from "../utils/icons";
+
 export interface ProjectElement {
     thumbnail?: string[];
-    imgWidth?: number; 
+    imgWidth?: number;
     imgHeight?: number;
     title: string;
     date: string;
@@ -23,19 +25,20 @@ export interface ProjectElement {
 
 export const PROJECTS = [
     {
-        thumbnail: ["/thumbnails/Hack-n-Snacks-1.png", 
-            "/thumbnails/Hack-n-Snacks-2.png", 
-            "/thumbnails/Hack-n-Snacks-3.png", 
-            "/thumbnails/Hack-n-Snacks-4.png", 
+        thumbnail: ["/thumbnails/Hack-n-Snacks-1.png",
+            "/thumbnails/Hack-n-Snacks-2.png",
+            "/thumbnails/Hack-n-Snacks-3.png",
+            "/thumbnails/Hack-n-Snacks-4.png",
             "/thumbnails/Hack-n-Snacks-5.png"],
         imgWidth: 1916,
         imgHeight: 1196,
         title: "Hack 'N Snacks",
         date: "February 2025",
-        description: 
+        description:
             "2nd in Best Beginner Hacks at HopperHacks\nA 2D platformer that teaches players about nutrition through exploring levels and encountering variety of foods, learning about their calories and nutrients as they go. At the end, they receive a nutrition summary based on what they ate.",
         repo: "https://github.com/karenz710/HackAndSnacks",
         link: "https://devpost.com/software/hack-n-snack",
+        tools: "C#, Unity Game Engine",
     },
     {
         thumbnail: ["/thumbnails/portfolio.png"],
@@ -47,7 +50,7 @@ export const PROJECTS = [
             "This very website using TypeScript and React",
         repo: "https://github.com/karenz710/karen-zhao",
         link: "#",
-        tools: "React, TypeScript",
+        tools: "TypeScript, React, NextJS, TailwindCSS",
     },
     {
         thumbnail: ["/thumbnails/playlist-app.jpg"],
@@ -67,7 +70,7 @@ export const PROJECTS = [
             "2nd Best Toy Robot - team of 4\nAn autonomous toy elephant as a creative companion for children. The toy draws different drawings (based on detected colors) using a 5-bar-linkage mechanism controlled by an inverse kinematics algorithm. Activates ear-flapping mechanism after completing a drawing.",
         repo: "#",
         link: "#",
-        tools: "Arduino,",
+        tools: "Arduino",
     },
 ];
 
@@ -81,6 +84,7 @@ const ProjectEntries = ({
     description,
     repo,
     link,
+    tools,
 }: ProjectElement) => {
     return (
         <div className="w-full max-w-4xl h-96 mb-8 bg-emerald-700/30 rounded-lg border border-gray-300">
@@ -93,7 +97,7 @@ const ProjectEntries = ({
                         pagination={{ clickable: true }} // dots
                         loop // circular array !
                         grabCursor // swiping
-                        className="h-full"    
+                        className="h-full"
                     >
                         {thumbnail?.map((imgSrc, index) => (
                             <SwiperSlide key={index}>
@@ -111,7 +115,7 @@ const ProjectEntries = ({
                 </div>
 
                 {/*Right Side: CONTENT */}
-                <div className="p-3 flex flex-col mr-5">
+                <div className="p-3 flex flex-col mr-5 justify-between mr-5 h-full">
                     {/* Title*/}{/* Date and Git*/}
                     <div className="flex flex-col items-center justify-center mb-4">
                         <h2 className="text-xl font-bold text-gray-300 mb-1">{title}</h2>
@@ -127,12 +131,14 @@ const ProjectEntries = ({
                             {link !== "#" && (
                                 <Link href={link}>
                                     <button className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white font-medium text-emerald-900 hover:bg-gray-300">
-                                        <FaLink size={18}/>
+                                        <FaLink size={18} />
                                     </button>
                                 </Link>
                             )}
                         </div>
-                        <hr className="border-b-[1.5px] border-teal-900 my-1 w-full" />
+                        <div
+                            className="divider before:border-b-[1.5px] before:border-teal-900 after:border-b-[1.5px]  after:border-teal-900 my-1 w-full"
+                        />
                         <div className="overflow-auto">
                             <p className="mt-2 text-gray-300 text-center leading-relaxed">
                                 {description.split("\n").map((line, index) => (
@@ -144,8 +150,19 @@ const ProjectEntries = ({
                         </div>
                     </div>
                     {/* Tech stack*/}
-                    <div> 
-                    </div>
+                    {tools && (
+                        <div className="flex flex-col items-center mb-3 gap-y-1">
+                            {/* Divider */}
+                            <div className="divider before:bg-teal-900 after:bg-teal-900 text-gray-300 w-full">
+                                Tech Stack
+                            </div>
+
+                            {/* Icon row */}
+                            <div className="flex gap-x-4 -mt-2">
+                                {tools.split(",").map((tool) => getIconElement(tool.trim()))}
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
