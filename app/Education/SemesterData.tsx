@@ -125,9 +125,9 @@ export interface ClassElement {
                 grade: " "
             },
             {
-                courseCode: "CSE 385",
-                courseName: "Analysis of Algorithms: Honors",
-                instructor: "Michael Bender",
+                courseCode: "CSE 475",
+                courseName: "System Fundamentals Teaching Assistant",
+                instructor: "Abid Malik",
                 grade: " "
             },
         ],
