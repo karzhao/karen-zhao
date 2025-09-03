@@ -6,7 +6,7 @@ export default function About() {
     const pictures_of_me = [
        { src: "/karen-icecream-shop.jpg", width: 1076, height: 1434, alt: "picture of me at a local ice cream shop" },
        { src: "/karen.jpeg", width: 914, height: 1200, alt: "picture of me on a cruise" },
-         { src: "/karen-restaurant.jpg", width: 695, height: 1183, alt: "picture of me at a restaurant" },
+         { src: "/karen-running-fall.jpg", width: 695, height: 1183, alt: "picture of me running in the fall" },
          { src: "/karen-yosemite.jpg", width: 3024, height: 4032, alt: "picture of me at Yosemite" },   
     ];
     const school = { src: "/stony-brook-university.jpg", width: 1600, height: 1066, alt: "Stony Brook University" };
