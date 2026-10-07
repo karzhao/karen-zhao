@@ -38,7 +38,7 @@ export default function About() {
                     <li><strong>Name:</strong> Karen Zhao</li>
                     <li><strong>Location:</strong> Queens, NY</li>
                     <li><strong>College:</strong> Stony Brook University</li>
-                    <li><strong>Expected Graduation:</strong> May 2027</li>
+                    <li><strong>Expected Graduation:</strong> May 2028</li>
                     <li className="mt-4">In my free time I like to:</li>
                     <ul className="ml-6 list-disc">
                         <li>Go on runs ⛅⛰️🌲🌼</li>

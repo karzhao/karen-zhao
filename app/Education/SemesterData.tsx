@@ -110,24 +110,64 @@ export interface ClassElement {
                 courseCode: "CSE 316",
                 courseName: "Software Development",
                 instructor: "Richard McKenna",
-                grade: " "
+                grade: "B+"
             },
             {
                 courseCode: "CSE 320",
                 courseName: "Systems Fundamentals II",
                 instructor: "Eugene Stark",
-                grade: " "
+                grade: "B"
             },
+        ],
+    },
+    {
+        name: "Spring 2026",
+        classes: [
             {
                 courseCode: "CSE 310",
                 courseName: "Computer Networks",
-                instructor: "Aruna Balasubramanian",
+                instructor: "Jalaa Hoblos",
+                grade: "A"
+            },
+            {
+                courseCode: "CSE 355",
+                courseName: "Cloud Computing",
+                instructor: "Michael Ferdman",
+                grade: "A"
+            },
+            {
+                courseCode: "CSE 416",
+                courseName: "Software Development II",
+                instructor: "Robert Kelly",
+                grade: "A"
+            },
+        ],
+    },
+    {
+        name: "Fall 2026",
+        classes: [
+            {
+                courseCode: "CSE 506",
+                courseName: "Operating Systems",
+                instructor: "Dongyoon Lee",
                 grade: " "
             },
             {
-                courseCode: "CSE 475",
-                courseName: "System Fundamentals Teaching Assistant",
-                instructor: "Abid Malik",
+                courseCode: "CSE 355",
+                courseName: "Computational Geometry",
+                instructor: "Joseph Mitchell",
+                grade: " "
+            },
+            {
+                courseCode: "AMS 351",
+                courseName: "Applied Algebra",
+                instructor: "Radu Laza",
+                grade: " "
+            },
+            {
+                courseCode: "AMS 540",
+                courseName: "Linear Programming",
+                instructor: "Evangelos Coutsias",
                 grade: " "
             },
         ],
