@@ -36,7 +36,7 @@ export const PROJECTS = [
         date: "February 2025",
         description:
             "2nd in Best Beginner Hacks at HopperHacks\nA 2D platformer that teaches players about nutrition through exploring levels and encountering variety of foods, learning about their calories and nutrients as they go. At the end, they receive a nutrition summary based on what they ate.",
-        repo: "https://github.com/karenz710/HackAndSnacks",
+        repo: "https://github.com/karzhao/HackNSnacks",
         link: "https://devpost.com/software/hack-n-snack",
         tools: "C#, Unity Game Engine",
     },
